@@ -2,32 +2,22 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #gallery {
-  position: relative;
   width: 100%;
 }
 
 #main-title {
-  position: absolute;
-  left: 50%; /* Center horizontally */
-  top: 50%; /* Center vertically */
-  transform: translate(-50%, -50%); /* Adjust for the h1's own dimensions */
   font-size: 10em; /* Adjust this value to match the desired scale */
-  text-align: right;
-  white-space: nowrap; /* Ensures text does not wrap */
+  text-align: center;
 }
 
 .image-container {
-  position: absolute;
-  transition: transform 1s;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
+  display: none; /* Hide other images if necessary */
 }
 
 /* Additional styling and responsive design can be added here */
