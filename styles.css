@@ -5,19 +5,22 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 #gallery {
   width: 100%;
+  height: 100%;
 }
 
 #main-title {
-  font-size: 10em; /* Adjust this value to match the desired scale */
-  text-align: center;
+  font-size: 5em; /* Adjust this value based on your preference */
+  font-weight: normal; /* Assuming standard font weight is desired */
+  line-height: 0.8; /* Adjust the line height to control spacing between "SOPHIYA" and "DANCE" */
 }
 
 .image-container {
   display: none; /* Hide other images if necessary */
 }
 
-/* Additional styling and responsive design can be added here */
+/* Remove any specific positioning styles from the #main-title if they exist */
