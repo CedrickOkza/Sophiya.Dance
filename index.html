@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sophiya Dance</title>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  .relative.overflow-hidden {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sophiya Dance
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <style>
+   .relative.overflow-hidden {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,32 +51,155 @@
   }
 
 /* Add additional styling as required */
-</style>
-</head>
-<body class="bg-white text-black font-sans">
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @media screen and (min-width: 600px) {
+    .navbar .icon {
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    .nav-links li {
+        padding: 0 15px;
+        font-size: 20px;
+    }
+}
 
+@media screen and (max-width: 599px) {
+    .navbar .icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        position: absolute;
+        top: 45px;
+        left: 0;
+    }
+    .nav-links li {
+        background: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+
+.navbar a {
+    display: block;
+    color: black;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+}
+  </style>
+  <style>
+   .social-icons {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.social-icons a {
+    font-size: 40px; /* Increased size */
+    color: black;
+    padding: 10px;
+}
+  </style>
+ </head>
+ <body class="bg-white text-black font-sans">
+  <nav class="navbar">
+   <div class="container">
+    <a class="icon" href="javascript:void(0);" onclick="navbarToggle()">
+     <i class="fa fa-bars">
+     </i>
+    </a>
+    <ul class="nav-links" id="navLinks">
+     <li>
+      <a href="#home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a href="#myart">
+       My Art
+      </a>
+     </li>
+     <li>
+      <a href="#modeling">
+       Modeling
+      </a>
+     </li>
+     <li>
+      <a href="#teaching">
+       Teaching
+      </a>
+     </li>
+     <li>
+      <a href="#dancing">
+       Dancing
+      </a>
+     </li>
+     <li>
+      <a href="#blog">
+       Blog
+      </a>
+     </li>
+     <li>
+      <a href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
   <div class="relative overflow-hidden">
-
-  <!-- H1 Text -->
-  <h1 id="mainTitle" class="absolute inset-0 flex items-center justify-left text-9xl font-bold opacity-0">SOPHIYA<br>DANCE</h1>
-
-
-
-
-  <!-- Floating Images Container -->
-<div id="image-container">
+   <!-- H1 Text -->
+   <h1 class="absolute inset-0 flex items-center justify-left text-9xl font-bold opacity-0" id="mainTitle">
+    SOPHIYA
+    <br/>
+    DANCE
+   </h1>
+   <!-- Floating Images Container -->
+   <div id="image-container">
     <!-- Add your images here with the 'floating-image' class -->
-    <img src="https://source.unsplash.com/random/400x600?dance" class="floating-image">
-    <img src="https://source.unsplash.com/random/400x600?dance" class="floating-image">
-    <img src="https://source.unsplash.com/random/400x600?dance" class="floating-image">
-    <img src="https://source.unsplash.com/random/400x600?dance" class="floating-image">
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
+    <img class="floating-image" src="https://source.unsplash.com/random/400x600?dance"/>
     <!-- More images -->
-</div>
-</div>
-
-
-<script>
-  let timer;
+   </div>
+  </div>
+  <script>
+   let timer;
   const mainTitle = document.getElementById('mainTitle');
 
   function resetFadeOut() {
@@ -138,8 +264,32 @@ images.forEach(img => {
 
 randomizeImages();
 requestAnimationFrame(animate);
+  </script>
+  
+  <div class="social-icons">
+   <a href="https://instagram.com" target="_blank">
+    <i class="fab fa-instagram">
+    </i>
+   </a>
+   <a href="https://youtube.com" target="_blank">
+    <i class="fab fa-youtube">
+    </i>
+   </a>
+   <a href="https://tiktok.com" target="_blank">
+    <i class="fab fa-tiktok">
+    </i>
+   </a>
+  </div>
 
-</script>
-
-</body>
+  <script>
+   function navbarToggle() {
+    var x = document.getElementById("navLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+  </script>
+ </body>
 </html>
