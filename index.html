@@ -31,6 +31,7 @@
     text-align: right;
     padding-left: 100px;
     top: 50%;
+    z-index: 2; /* Add z-index to place H1 above images */
   }
 
   #image-container {
@@ -38,6 +39,7 @@
     width: 100%;
     height: 500px; /* Adjust as needed */
     overflow: hidden;
+    z-index: 1; /* Add z-index to place images behind H1 */
   }
 
   .floating-image {
