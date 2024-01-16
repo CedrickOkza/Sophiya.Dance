@@ -11,9 +11,9 @@ body, html {
 
 #main-title {
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Adjust for the h1's own dimensions */
   font-size: 10em; /* Adjust this value to match the desired scale */
   text-align: right;
   white-space: nowrap; /* Ensures text does not wrap */
