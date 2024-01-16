@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sophiya Dance</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .relative.overflow-hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This will make the div take the full viewport height */
+  }
+  .fade-out {
+    animation: fadeOut 2s forwards;
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  .h1-inverted {
+    mix-blend-mode: difference;
+    color: white;
+  }
+
+  h1 {
+    text-align: right;
+    padding-left: 100px;
+    top: 50%;
+}
+</style>
+</head>
+<body class="bg-white text-black font-sans">
+
+<div class="relative overflow-hidden">
+
+  <!-- H1 Text -->
+  <h1 id="mainTitle" class="absolute inset-0 flex items-center justify-left text-9xl font-bold opacity-0">SOPHIYA<br>DANCE</h1>
+
+  <!-- Images -->
+  <div id="imageContainer" class="flex overflow-hidden" style="height: 100vh; position: relative;">
+    <img src="https://source.unsplash.com/random/400x600?dance" alt="Dance" class="col-start-1 col-span-3 row-start-1 row-span-6">
+    <img src="https://source.unsplash.com/random/400x600?dance" alt="Dance" class="col-start-4 col-span-3 row-start-1 row-span-6">
+    <img src="https://source.unsplash.com/random/400x600?dance" alt="Dance" class="col-start-7 col-span-3 row-start-1 row-span-6">
+    <img src="https://source.unsplash.com/random/400x600?dance" alt="Dance" class="col-start-10 col-span-3 row-start-1 row-span-6">
+  </div>
+</div>
+
+<script>
+  let timer;
+  const mainTitle = document.getElementById('mainTitle');
+
+  function resetFadeOut() {
+    mainTitle.classList.remove('fade-out');
+    mainTitle.style.opacity = 1;
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      mainTitle.classList.add('fade-out');
+    }, 4000);
+  }
+
+  document.body.addEventListener('mousemove', () => {
+    resetFadeOut();
+  });
+
+  // Invert color of H1 when over images
+  document.addEventListener('mousemove', (e) => {
+    const images = document.querySelectorAll('img');
+    let overImage = false;
+    images.forEach((img) => {
+      const rect = img.getBoundingClientRect();
+      if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+        overImage = true;
+      }
+    });
+    if (overImage) {
+      mainTitle.classList.add('h1-inverted');
+    } else {
+      mainTitle.classList.remove('h1-inverted');
+    }
+  });
+
+  // Initialize the title visibility
+  resetFadeOut();
+</script>
+
+
+<script>
+  // Function to generate random size
+  function randomSize() {
+    return Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+  }
+
+  // Function to set initial properties of images and start the animation
+  function initializeImages() {
+    const images = document.querySelectorAll('#imageContainer img');
+    images.forEach(img => {
+      // Set random width
+      img.style.width = randomSize() + 'px';
+      // Set initial right position (off-screen)
+      img.style.position = 'absolute';
+      img.style.right = '-' + img.offsetWidth + 'px';
+      // Start the animation
+      animateImage(img);
+    });
+  }
+
+  // Function to animate image from right to left
+  function animateImage(img) {
+    let rightPosition = -img.offsetWidth;
+    function frame() {
+      rightPosition++;
+      img.style.right = rightPosition + 'px';
+      // Reset position if image has moved out of screen
+      if (rightPosition > window.innerWidth) {
+        rightPosition = -img.offsetWidth;
+      }
+    }
+    setInterval(frame, 20); // Adjust speed here
+  }
+
+  // Initialize the images on window load
+  window.onload = initializeImages;
+</script>
+
+</body>
+</html>
