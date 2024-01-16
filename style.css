@@ -1,0 +1,73 @@
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, nav, main, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    background-color: #fff;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.service-item {
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+    }
+}
