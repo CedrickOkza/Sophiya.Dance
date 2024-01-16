@@ -1,0 +1,28 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#gallery {
+  position: relative;
+  width: 100%;
+}
+
+#main-title {
+  text-align: center;
+  font-size: 48px;
+}
+
+.image-container {
+  position: absolute;
+  transition: transform 1s;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Additional styling and responsive design can be added here */
