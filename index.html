@@ -1,53 +1,90 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Website Design</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sophiya Dance</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .fade-out {
+    animation: fadeOut 2s forwards;
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  .h1-inverted {
+    mix-blend-mode: difference;
+    color: white;
+  }
+</style>
 </head>
-<body>
-    <header>
-        <h1>Company Logo</h1>
-        <p>Welcome to our website</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="home">
-            <h2>Welcome to Our Company</h2>
-            <p>Description of the company or services.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="service-item">Service 1</div>
-            <div class="service-item">Service 2</div>
-            <div class="service-item">Service 3</div>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Information about the company history, team, etc.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea placeholder="Your Message"></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Company Name. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+<body class="bg-white text-black font-sans">
+
+<div class="relative overflow-hidden">
+  <!-- Hamburger Menu Icon -->
+  <div class="absolute top-4 left-4 z-10">
+    <div class="space-y-2">
+      <div class="w-8 h-0.5 bg-black"></div>
+      <div class="w-8 h-0.5 bg-black"></div>
+      <div class="w-8 h-0.5 bg-black"></div>
+    </div>
+  </div>
+
+  <!-- H1 Text -->
+  <h1 id="mainTitle" class="absolute inset-0 flex items-center justify-center text-9xl font-bold opacity-0">SOPHIYA<br>DANCE</h1>
+
+  <!-- Images -->
+  <div class="grid grid-cols-12 gap-4 p-4">
+    <img src="https://source.unsplash.com/random/400x600?dance" alt="Dance" class="col-start-1 col-span-3 row-start-1 row-span-6">
+    <img src="https://source.unsplash.com/random/400x600?dance" alt="Dance" class="col-start-4 col-span-3 row-start-1 row-span-6">
+    <img src="https://source.unsplash.com/random/400x600?dance" alt="Dance" class="col-start-7 col-span-3 row-start-1 row-span-6">
+    <img src="https://source.unsplash.com/random/400x600?dance" alt="Dance" class="col-start-10 col-span-3 row-start-1 row-span-6">
+  </div>
+</div>
+
+<script>
+  let timer;
+  const mainTitle = document.getElementById('mainTitle');
+
+  function resetFadeOut() {
+    mainTitle.classList.remove('fade-out');
+    mainTitle.style.opacity = 1;
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      mainTitle.classList.add('fade-out');
+    }, 4000);
+  }
+
+  document.body.addEventListener('mousemove', () => {
+    resetFadeOut();
+  });
+
+  // Invert color of H1 when over images
+  document.addEventListener('mousemove', (e) => {
+    const images = document.querySelectorAll('img');
+    let overImage = false;
+    images.forEach((img) => {
+      const rect = img.getBoundingClientRect();
+      if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+        overImage = true;
+      }
+    });
+    if (overImage) {
+      mainTitle.classList.add('h1-inverted');
+    } else {
+      mainTitle.classList.remove('h1-inverted');
+    }
+  });
+
+  // Initialize the title visibility
+  resetFadeOut();
+</script>
+
 </body>
 </html>
