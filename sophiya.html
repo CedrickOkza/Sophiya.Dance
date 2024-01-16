@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription Form</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .subscribe-button {
+    background-color: #22c55e; /* A nice shade of green */
+    color: white;
+    font-weight: bold;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="text-center">
+    <h1 class="text-4xl mb-4">My Website</h1>
+    <div id="subscription-area">
+      <button id="subscribe-btn" class="subscribe-button px-4 py-2 rounded">Subscribe</button>
+      <div id="email-input-area" class="hidden">
+        <input type="email" id="email-input" class="border-2 border-gray-300 px-4 py-2 rounded-l" placeholder="Enter your email">
+        <button id="email-submit-btn" class="bg-gray-300 px-4 py-2 rounded-r">
+          <svg id="arrow-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+          <svg id="check-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const subscribeBtn = document.getElementById('subscribe-btn');
+  const emailInputArea = document.getElementById('email-input-area');
+  const emailInput = document.getElementById('email-input');
+  const emailSubmitBtn = document.getElementById('email-submit-btn');
+  const arrowIcon = document.getElementById('arrow-icon');
+  const checkIcon = document.getElementById('check-icon');
+
+  subscribeBtn.addEventListener('click', function() {
+    subscribeBtn.classList.add('hidden');
+    emailInputArea.classList.remove('hidden');
+  });
+
+  emailSubmitBtn.addEventListener('click', function() {
+    if (emailInput.value) {
+      arrowIcon.classList.add('hidden');
+      checkIcon.classList.remove('hidden');
+    }
+  });
+</script>
+</body>
+</html>
