@@ -944,3 +944,8 @@ section .container {
               transition: transform 0.3s ease;
           }
 
+.art-image {
+    max-width: 100%;
+    max-height: 300px; /* Adjust this value based on your layout */
+    object-fit: cover; /* This ensures the aspect ratio is maintained */
+  }
