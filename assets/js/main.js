@@ -73,26 +73,6 @@
     }
   }
 
-
-  // H1 fadeout
-    let timer;
-  const mainTitle = document.getElementById('mainTitle');
-
-  function resetFadeOut() {
-    mainTitle.classList.remove('fade-out');
-    mainTitle.style.opacity = 1;
-    if (timer) {
-      clearTimeout(timer);
-    }
-    timer = setTimeout(() => {
-      mainTitle.classList.add('fade-out');
-    }, 4000);
-  }
-
-  document.body.addEventListener('mousemove', () => {
-    resetFadeOut();
-  });
-  // H1 fadeout CLOSE
   
   // H1 invert color
   function checkOverlap() {
