@@ -145,6 +145,15 @@ function animate() {
     });
     requestAnimationFrame(animate);
 }
+
+  images.forEach(img => {
+    img.addEventListener('mouseover', () => img.style.transform = 'scale(1.1)');
+    img.addEventListener('mouseout', () => img.style.transform = 'scale(1)');
+});
+
+randomizeImages();
+requestAnimationFrame(animate);
+  
   // Animate Images CLOSE
 
   // Mobile Navigation
