@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
   #header h1 {
-    font-size: 36px;
+    font-size: 65px;
   }
   #header h2 {
     font-size: 20px;
@@ -359,7 +359,7 @@ section .container {
 .section-title p {
   margin: 0;
   margin: -15px 0 15px 0;
-  font-size: 36px;
+  font-size: 65px;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -422,7 +422,7 @@ section .container {
 }
 
 .counts .count-box span {
-  font-size: 36px;
+  font-size: 65px;
   display: block;
   font-weight: 600;
   color: #fff;
