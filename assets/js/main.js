@@ -99,6 +99,24 @@
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
 
-  
+
+  // JavaScript to center the expanded video on hover
+  const videoContainers = document.querySelectorAll('.video-container');
+  videoContainers.forEach(container => {
+    container.addEventListener('mouseover', () => {
+      const iframe = container.querySelector('iframe');
+      const rect = container.getBoundingClientRect();
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const offsetX = centerX - (rect.left + rect.width / 2);
+      const offsetY = centerY - (rect.top + rect.height / 2);
+      iframe.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(1.1)`;
+    });
+
+    container.addEventListener('mouseout', () => {
+      const iframe = container.querySelector('iframe');
+      iframe.style.transform = 'scale(1)';
+    });
+  });
 
 })(jQuery);
