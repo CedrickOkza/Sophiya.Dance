@@ -897,3 +897,8 @@ section .container {
         height: auto; /* Keeps the image aspect ratio */
         object-fit: cover; /* Ensures the image covers the container without stretching */
     }
+
+
+.bottom-padding {
+  margin-bottom: 30px; /* Adjust the value as needed */
+}
