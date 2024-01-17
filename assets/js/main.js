@@ -125,36 +125,6 @@
   resetFadeOut();
   // H1 invert color CLOSE
 
-  // Animate Images
-  const images = document.querySelectorAll('.floating-image');
-
-function randomizeImages() {
-    images.forEach(img => {
-        img.style.left = Math.random() * window.innerWidth + 'px';
-        img.style.top = Math.random() * 500 + 'px'; // Adjust height as needed
-    });
-}
-
-function animate() {
-    images.forEach(img => {
-        let currentLeft = parseInt(img.style.left, 10);
-        img.style.left = (currentLeft - 1) + 'px'; 
-        if (currentLeft < -img.offsetWidth) {
-            img.style.left = window.innerWidth + 'px';
-        }
-    });
-    requestAnimationFrame(animate);
-}
-
-  images.forEach(img => {
-    img.addEventListener('mouseover', () => img.style.transform = 'scale(1.1)');
-    img.addEventListener('mouseout', () => img.style.transform = 'scale(1)');
-});
-
-randomizeImages();
-requestAnimationFrame(animate);
-  
-  // Animate Images CLOSE
 
   // Mobile Navigation
   if ($('.nav-menu').length) {
