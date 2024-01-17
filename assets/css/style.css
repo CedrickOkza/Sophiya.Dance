@@ -932,3 +932,8 @@ section .container {
     mix-blend-mode: difference;
     color: white;
   }
+
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+  }
