@@ -111,6 +111,7 @@
       const offsetX = centerX - (rect.left + rect.width / 2);
       const offsetY = centerY - (rect.top + rect.height / 2);
       iframe.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(1.1)`;
+      iframe.style.zIndex = '9999'; // Bring to the very front
     });
 
     container.addEventListener('mouseout', () => {
@@ -119,4 +120,6 @@
     });
   });
 
+
+  
 })(jQuery);
