@@ -936,7 +936,3 @@ section .container {
     color: white;
   }
 
-
-.fade-out {
-    animation: fadeOut 2s forwards;
-  }
