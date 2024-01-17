@@ -931,15 +931,11 @@ section .container {
 # SOPHIYA ADDITIONS
 --------------------------------------------------------------*/
 
-.video-gallery .video-container {
+ .video-gallery .video-container {
               position: relative;
               overflow: hidden;
-              margin-bottom: 40px; /* Increase padding to four times as much */
-          }
-          .video-gallery .video-container:hover iframe {
-              transform: scale(1.1);
-              transition: transform 0.3s ease;
-              z-index: 9999; /* Bring to the very front when hovered */
+              margin-bottom: 40px; /* Reduce padding by half */
+              z-index: 1; /* Ensure the videos start at a higher z-index */
           }
           .video-gallery iframe {
               width: 100%;
