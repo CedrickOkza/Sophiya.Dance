@@ -106,7 +106,16 @@
   // H1 invert color CLOSE
 
 
-  
+  document.addEventListener('scroll', function() {
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(slide => {
+        const rect = slide.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            slide.classList.add('in-view');
+        }
+    });
+});
+
 
 
   // Mobile Navigation
