@@ -946,6 +946,7 @@ section .container {
 
 .art-image {
     max-width: 100%;
-    max-height: 300px; /* Adjust this value based on your layout */
+    max-height: 500px; /* Adjust this value based on your layout */
     object-fit: cover; /* This ensures the aspect ratio is maintained */
+    margin-bottom: 40px; /* Reduce padding by half */
   }
