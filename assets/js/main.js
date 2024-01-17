@@ -122,5 +122,32 @@
   });
 
 
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+  var images = document.querySelectorAll('.art-image');
+  var modal = document.getElementById('myModal');
+  var modalImg = document.getElementById('img01');
+  var captionText = document.getElementById('caption');
+  var span = document.getElementsByClassName('close')[0];
+
+  images.forEach(function (img) {
+    img.onmouseover = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+  });
+
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+});
+
+
+
+  
+
   
 })(jQuery);
