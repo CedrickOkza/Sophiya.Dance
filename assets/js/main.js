@@ -126,23 +126,6 @@
   // H1 invert color CLOSE
 
 
-   // image animation
-  document.addEventListener('scroll', function() {
-    var images = document.querySelectorAll('.animated-image');
-    images.forEach(function(img) {
-        img.style.animationDuration = '10s'; // Speed up animation
-    });
-
-    clearTimeout(window.decelerateAnim);
-
-    window.decelerateAnim = setTimeout(function() {
-        images.forEach(function(img) {
-            img.style.animationDuration = '15s'; // Slow down after scrolling stops
-        });
-    }, 1000);
-});
- // image animation CLOSE
-
   // Mobile Navigation
   if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({
