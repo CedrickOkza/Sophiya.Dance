@@ -945,11 +945,13 @@ section .container {
           }
 
 
-.image-gallery .image-container {
+ .image-gallery .image-container {
               position: relative;
               overflow: hidden;
               margin-bottom: 40px; /* Padding beneath each image */
               z-index: 1; /* Ensure the images start at a higher z-index */
+              width: 100%; /* Set a fixed width for all image containers */
+              max-width: 400px; /* Adjust the maximum width as needed */
           }
           .image-gallery .image-container:hover img {
               transform: scale(1.1); /* Increase size on hover */
