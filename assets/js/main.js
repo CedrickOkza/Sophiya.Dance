@@ -122,10 +122,7 @@
   });
 
 
-
-
-
-  document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
   var images = document.querySelectorAll('.art-image');
   var modal = document.getElementById('myModal');
   var modalImg = document.getElementById('img01');
@@ -133,7 +130,7 @@
   var span = document.getElementsByClassName('close')[0];
 
   images.forEach(function (img) {
-    img.onmouseover = function(){
+    img.onclick = function() {
       modal.style.display = "block";
       modalImg.src = this.src;
       captionText.innerHTML = this.alt;
@@ -144,7 +141,6 @@
     modal.style.display = "none";
   }
 });
-
 
 
   
