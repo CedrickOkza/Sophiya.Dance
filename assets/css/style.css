@@ -992,3 +992,12 @@ section .container {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+.art-image {
+  transition: transform 0.3s ease; /* Smooth transition for the transform */
+}
+
+.art-image:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
