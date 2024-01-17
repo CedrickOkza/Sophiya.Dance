@@ -32,8 +32,8 @@ body::before {
 @media (max-width: 1023px) {
   body::before {
     background-image: url("../img/bg-mb.jpg");
-    background-size: 275% /* Your desired size */;
-    background-position: top right;
+    background-size: cover /* Your desired size */;
+    background-position: top;
   }
 }
 
