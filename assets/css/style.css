@@ -934,11 +934,12 @@ section .container {
 .video-gallery .video-container {
               position: relative;
               overflow: hidden;
+              margin-bottom: 80px; /* Increase padding to four times as much */
           }
           .video-gallery .video-container:hover iframe {
-              transform: scale(1.1); /* Increase size on hover */
+              transform: scale(1.1);
               transition: transform 0.3s ease;
-              z-index: 1; /* Place on top when hovered */
+              z-index: 9999; /* Bring to the very front when hovered */
           }
           .video-gallery iframe {
               width: 100%;
@@ -946,4 +947,3 @@ section .container {
               border: none;
               transition: transform 0.3s ease;
           }
-
