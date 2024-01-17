@@ -931,13 +931,5 @@ section .container {
 # SOPHIYA ADDITIONS
 --------------------------------------------------------------*/
 
-.gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-        }
-        .gallery iframe {
-            width: 100%;
-            height: 200px; /* Adjust as needed */
-        }
+
 
