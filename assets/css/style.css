@@ -956,7 +956,7 @@ section .container {
 
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
+  position: relative;
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
@@ -977,11 +977,12 @@ section .container {
 
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 10px;
+  right: 10px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
+  z-index: 1; /* Ensure it's above other elements */
   cursor: pointer;
 }
 
