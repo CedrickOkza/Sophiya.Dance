@@ -73,6 +73,59 @@
     }
   }
 
+
+  // H1 fadeout
+    let timer;
+  const mainTitle = document.getElementById('mainTitle');
+
+  function resetFadeOut() {
+    mainTitle.classList.remove('fade-out');
+    mainTitle.style.opacity = 1;
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      mainTitle.classList.add('fade-out');
+    }, 4000);
+  }
+
+  document.body.addEventListener('mousemove', () => {
+    resetFadeOut();
+  });
+  // H1 fadeout CLOSE
+  
+  // H1 invert color
+  function checkOverlap() {
+        var h1 = document.querySelector('h1');
+        var images = document.querySelectorAll('img');
+        var h1Rect = h1.getBoundingClientRect();
+
+        for (var i = 0; i < images.length; i++) {
+          var img = images[i];
+          var imgRect = img.getBoundingClientRect();
+
+          var overlap = !(h1Rect.right < imgRect.left || h1Rect.left > imgRect.right ||
+                          h1Rect.bottom < imgRect.top || h1Rect.top > imgRect.bottom);
+
+          if (overlap) {
+            h1.classList.add('h1-inverted');
+            return; // Break the loop once an overlap is found
+          }
+        }
+
+        h1.classList.remove('h1-inverted'); // Remove the class if no overlap is found
+      }
+
+      // Check for overlap on page load and on scroll
+      window.addEventListener('load', checkOverlap);
+      window.addEventListener('scroll', checkOverlap);
+
+
+  // Initialize the title visibility
+  resetFadeOut();
+  // H1 invert color CLOSE
+
+
   // Mobile Navigation
   if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({
