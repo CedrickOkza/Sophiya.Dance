@@ -33,7 +33,7 @@ body::before {
   body::before {
     background-image: url("../img/bg-mb.jpg");
     background-size: cover /* Your desired size */;
-    background-position: top;
+    background-position: top left;
   }
 }
 
