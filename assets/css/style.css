@@ -4,8 +4,8 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #040404;
-  color: #fff;
+  background-color: #fff;
+  color: #040404;
   position: relative;
   background: transparent;
 }
@@ -13,7 +13,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404;
+  background: #fff;
   background-size: cover;
   left: 0;
   right: 0;
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h1 a, #header h1 a:hover {
-  color: #fff;
+  color: #040404;
   line-height: 1;
   display: inline-block;
 }
@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h2 span {
-  color: #fff;
+  color: #040404;
   border-bottom: 2px solid #18d26e;
   padding-bottom: 6px;
 }
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #040404;
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #fff;
+  color: #040404;
   text-decoration: none;
 }
 
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #fff;
+  color: #040404;
 }
 
 .mobile-nav {
@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #fff;
+  color: #040404;
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-active .mobile-nav-toggle i {
-  color: #fff;
+  color: #040404;
 }
 
 /* Header Top */
@@ -366,7 +366,7 @@ section .container {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #fff;
+  color: #040404;
 }
 
 /*--------------------------------------------------------------
@@ -428,7 +428,7 @@ section .container {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #fff;
+  color: #040404;
 }
 
 .counts .count-box p {
@@ -454,7 +454,7 @@ section .container {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #fff;
+  color: #040404;
 }
 
 .skills .progress .skill .val {
@@ -496,7 +496,7 @@ section .container {
   padding: 0;
   line-height: 1;
   font-size: 16px;
-  color: #fff;
+  color: #040404;
 }
 
 .interests .icon-box:hover {
@@ -524,7 +524,7 @@ section .container {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
-  color: #fff;
+  color: #040404;
 }
 
 .testimonials .testimonial-item h4 {
@@ -611,7 +611,7 @@ section .container {
 }
 
 .services .icon-box .icon i {
-  color: #fff;
+  color: #040404;
   font-size: 28px;
 }
 
@@ -635,7 +635,7 @@ section .container {
 }
 
 .services .icon-box h4 a {
-  color: #fff;
+  color: #040404;
 }
 
 .services .icon-box p {
@@ -650,7 +650,7 @@ section .container {
 }
 
 .services .icon-box:hover .icon {
-  background: #fff;
+  background: #040404;
 }
 
 .services .icon-box:hover .icon i {
@@ -662,7 +662,7 @@ section .container {
 }
 
 .services .icon-box:hover h4 a, .services .icon-box:hover p {
-  color: #fff;
+  color: #040404;
 }
  
 /*--------------------------------------------------------------
@@ -693,7 +693,7 @@ section .container {
 
 .contact .info-box p {
   padding: 0;
-  color: #fff;
+  color: #040404;
   line-height: 24px;
   font-size: 14px;
   margin: 0 0 0 68px;
@@ -707,7 +707,7 @@ section .container {
 .contact .info-box .social-links a {
   font-size: 18px;
   display: inline-block;
-  color: #fff;
+  color: #040404;
   line-height: 1;
   margin-right: 12px;
   transition: 0.3s;
@@ -779,7 +779,7 @@ section .container {
   background: rgba(255, 255, 255, 0.08);
   border: 0;
   transition: 0.3s;
-  color: #fff;
+  color: #040404;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
@@ -823,7 +823,7 @@ section .container {
   background: #18d26e;
   border: 0;
   padding: 10px 30px;
-  color: #fff;
+  color: #040404;
   transition: 0.4s;
   border-radius: 4px;
 }
