@@ -937,3 +937,27 @@ section .container {
 .fade-out {
     animation: fadeOut 2s forwards;
   }
+
+
+
+#image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.animated-image {
+    position: absolute;
+    right: -100%; /* Start off-screen */
+    animation: slideLeft 15s linear infinite;
+    transition: transform 0.3s ease;
+}
+
+@keyframes slideLeft {
+    0% { right: -100%; }
+    100% { right: 100%; }
+}
+
+.animated-image:hover {
+    transform: scale(1.1);
+}
