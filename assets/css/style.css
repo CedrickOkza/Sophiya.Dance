@@ -934,7 +934,7 @@ section .container {
 .video-gallery .video-container {
               position: relative;
               overflow: hidden;
-              margin-bottom: 80px; /* Increase padding to four times as much */
+              margin-bottom: 40px; /* Increase padding to four times as much */
           }
           .video-gallery .video-container:hover iframe {
               transform: scale(1.1);
