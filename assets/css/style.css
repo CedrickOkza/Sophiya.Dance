@@ -28,6 +28,15 @@ body::before {
   }
 }
 
+/* Add this new media query for mobile devices */
+@media (max-width: 1023px) {
+  body::before {
+    background-image: url("../img/bg-mb.jpg");
+    background-size: 100% /* Your desired size */;
+  }
+}
+
+
 a {
   color: #1084b4;
 }
