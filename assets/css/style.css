@@ -946,7 +946,7 @@ section .container {
 #image-container {
     position: relative;
     width: 100%;
-    z-index: 996;
+    z-index: 1;
     overflow: hidden;
 }
 
